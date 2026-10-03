@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مدارس الإخوة – فرع نون</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6f9;--card:#fff;--ink:#1b2a3a;--mut:#5d6f82;--line:#d8e0e8;--navy:#12395a;--teal:#1b7f96;--gold:#b8923a;--pri:#12395a;--on:#fff;--bad:#b3261e;--ok:#17703f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a26;--card:#15283a;--ink:#e8eef4;--mut:#9db0c2;--line:#27405a;--pri:#4fb3c9;--on:#082433}}
+:root[data-theme="dark"]{--bg:#0e1a26;--card:#15283a;--ink:#e8eef4;--mut:#9db0c2;--line:#27405a;--pri:#4fb3c9;--on:#082433}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Tajawal,Tahoma,sans-serif;line-height:1.8}
+.topbar{background:var(--navy);color:#dbe7f1;font-size:14px;padding:6px 24px;display:flex;gap:22px;flex-wrap:wrap}
+header{display:flex;align-items:center;gap:14px;padding:12px 24px;background:var(--card);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.logo{width:72px;height:64px;flex:none}
+.logo img{width:100%;height:100%;object-fit:contain;display:block}
+.tt h1{font-size:21px;margin:0;font-weight:800;color:var(--ink);line-height:1.3}
+.tt small{color:var(--mut);font-size:14px}
+.sp{flex:1}
+#nav{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+.nv{background:none;color:var(--ink);box-shadow:none;border-radius:0;padding:8px 14px;border-bottom:3px solid transparent;font-weight:500}
+.nv:hover{border-bottom-color:var(--gold)}
+.nv.go{background:var(--navy);color:#fff;border-radius:6px;border:0;margin-inline-start:8px}
+#who{font-weight:700;color:var(--ink)}#who:empty{display:none}
+main{max-width:1000px;margin:0 auto;padding:24px 20px 40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:22px;margin-bottom:18px}
+h2{font-size:21px;margin:0 0 14px;font-weight:800}
+.sec h2{padding-bottom:8px;border-bottom:3px solid var(--gold);display:inline-block}
+label{display:block;font-size:14px;margin:10px 0 4px;color:var(--mut)}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+button{font:inherit;font-weight:700;padding:10px 22px;border:0;border-radius:6px;background:var(--pri);color:var(--on);cursor:pointer}
+button.ghost{background:none;color:var(--ink);border:1px solid var(--line)}
+button.sm{padding:4px 12px;font-size:13px}
+.login{max-width:420px;margin:20px auto;text-align:center}
+.biglogo{width:130px;height:auto;margin:0 auto 6px;display:block}
+.login form{text-align:right}.login button{width:100%;margin-top:10px}
+.err{color:var(--bad);font-size:14px;min-height:22px;margin-top:8px}
+.ok{color:var(--ok);font-size:15px;font-weight:700;margin-inline-start:12px}
+.hint{font-size:13px;color:var(--mut);border-top:1px dashed var(--line);margin-top:16px;padding-top:10px;text-align:right}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.tabs{display:flex;gap:4px;margin-bottom:16px;border-bottom:1px solid var(--line)}
+.tabs button{background:none;color:var(--mut);border-radius:0;border-bottom:3px solid transparent}
+.tabs button.on{color:var(--ink);border-bottom-color:var(--gold)}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:right;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--mut);font-weight:500;background:var(--bg)}
+td input{width:96px}
+.chk{display:flex;gap:10px;flex-wrap:wrap}.chk label{display:flex;gap:4px;align-items:center;margin:0;color:var(--ink)}.chk input{width:auto}
+.pass{color:var(--ok);font-weight:700}.fail{color:var(--bad);font-weight:700}
+[hidden]{display:none!important}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:8px}
+.info p{margin:8px 0}
+.msg{border-bottom:1px solid var(--line);padding:10px 0}.msg small{color:var(--mut)}
+footer:empty{display:none}
+footer{background:var(--navy);color:#cfdce8;padding:28px 24px 18px;font-size:14px}
+.fg{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+footer h3{color:#fff;margin:0 0 8px;font-size:16px}footer p{margin:4px 0}
+footer .lk{background:none;color:#cfdce8;padding:2px 0;display:block;font-weight:400}
+.copy{text-align:center;border-top:1px solid rgba(255,255,255,.18);margin-top:18px;padding-top:12px}
+
+:root{--b:#1769c9;--t:#12a4b8;--g:#2bb673;--y:#ffb703;--c:#ff6b4a;--p:#7b5cd6;--k:#e0508f;--soft:#e8f2fc;--navy:#0f4c9a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--soft:#12304c}}
+:root[data-theme="dark"]{--soft:#12304c}
+header{border-top:6px solid;border-image:linear-gradient(90deg,#ffb703,#ff6b4a,#12a4b8,#1769c9) 1}
+main.home{max-width:none;padding:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.hero{position:relative;color:#fff;padding:48px 0 90px;background:radial-gradient(circle at 12% 20%,rgba(255,255,255,.12) 0 90px,transparent 91px),radial-gradient(circle at 60% 90%,rgba(255,183,3,.25) 0 120px,transparent 121px),linear-gradient(160deg,#1769c9,#12a4b8)}
+.hg{display:grid;grid-template-columns:1fr 1.05fr;gap:20px;align-items:center}
+.hero h2{font-size:42px;line-height:1.35;margin:0 0 14px;font-weight:800}
+.hero p{font-size:18px;margin:0 0 24px;max-width:44ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero .b1{background:var(--y);color:#10304f;padding:13px 26px;font-size:17px;border-radius:8px}
+.hero .b2{background:none;border:2px solid #fff;color:#fff;padding:11px 24px;font-size:17px;border-radius:8px}
+.hero>svg.wave{position:absolute;bottom:-1px;left:0;width:100%;height:60px;display:block}
+.hero .art{width:100%;height:auto}
+.quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:-52px;position:relative;z-index:2}
+.tile{border-radius:14px;color:#fff;padding:22px 20px;text-align:right;display:block;width:100%;font-size:20px;font-weight:800;border:0;box-shadow:0 8px 20px rgba(15,76,154,.2);transition:transform .15s}
+.tile:hover{transform:translateY(-4px)}
+.tile small{display:block;font-weight:400;font-size:14px;opacity:.95;margin-top:2px}
+.tile svg{width:46px;height:46px;fill:currentColor;display:block;margin-bottom:10px;background:rgba(255,255,255,.22);border-radius:12px;padding:9px}
+.tile.y{color:#10304f}.tile.y svg{background:rgba(16,48,79,.12)}
+.part{padding:48px 0}
+.st{text-align:center;font-size:28px;margin:0 0 26px;font-weight:800}
+.st::after{content:"";display:block;width:90px;height:5px;border-radius:3px;margin:10px auto 0;background:linear-gradient(90deg,var(--y),var(--c),var(--t),var(--b))}
+.about{display:grid;grid-template-columns:1.4fr .6fr;gap:30px;align-items:center}
+.about p{font-size:17px;margin:0 0 12px}
+.badge{background:var(--soft);border-radius:18px;padding:22px;text-align:center;border:3px dashed var(--t)}
+.badge img{width:100%;max-width:200px}
+.band{background:linear-gradient(120deg,#0f4c9a,#12a4b8);color:#fff;padding:34px 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;text-align:center}
+.stats b{display:block;font-size:44px;line-height:1.2;color:var(--y)}
+.grades{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.gr{background:var(--card);border-radius:14px;border:1px solid var(--line);border-bottom:6px solid var(--k);padding:18px;display:flex;gap:14px;align-items:center}
+.gr i{font-style:normal;flex:none;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:24px;font-weight:800}
+.gr b{display:block}.gr small{color:var(--mut)}
+.subj{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.subj span{padding:9px 20px;border-radius:99px;color:#fff;font-weight:700}
+.contact{background:var(--soft)}
+@media (max-width:760px){.hg,.about{grid-template-columns:1fr}.hero h2{font-size:30px}.hero{padding:30px 0 80px}}
+footer{background:#0c3a73}
+</style>
+</head>
+<body>
+<div class="topbar" id="top"></div>
+<header>
+  <div class="logo"><img id="lg" alt="شعار مدارس الإخوة"></div>
+  <div class="tt"><h1>مدارس الإخوة الابتدائية</h1><small>فرع نون</small></div>
+  <div class="sp"></div><nav id="nav"></nav>
+  <span id="who"></span>
+  <button class="ghost sm" id="out" hidden>تسجيل الخروج</button>
+</header>
+<main id="app"></main>
+<footer id="ft"></footer>
+
+<script>
+const SUBJ_CLASS=['اللغة العربية','الرياضيات','العلوم','الاجتماعيات','التربية الدينية'];
+const SUBJ_SPEC=['اللغة الإنكليزية','المعلوماتية'];
+const ALL=[...SUBJ_CLASS,...SUBJ_SPEC];
+const GRADES=['الأول','الثاني','الثالث','الرابع','الخامس','السادس','السابع'];
+const KEY='nun_school_v1';
+const LOGO='data:image/jpeg;base64,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';
+document.getElementById('lg').src=LOGO;
+let mem=null;
+
+function seed(){
+  return {
+    users:[
+      {name:'إدارة المدرسة',email:'admin@nun.edu',pass:'admin123',role:'admin'},
+      {name:'المعلمة سناء',email:'sana@nun.edu',pass:'1234',role:'teacher',kind:'class',classGrade:1,subjects:SUBJ_CLASS,grades:[1]},
+      {name:'المعلمة ريما (رياضيات)',email:'rima@nun.edu',pass:'1234',role:'teacher',kind:'spec',subjects:['الرياضيات'],grades:[5,6,7]},
+      {name:'المعلمة دانة (إنكليزي)',email:'dana@nun.edu',pass:'1234',role:'teacher',kind:'spec',subjects:['اللغة الإنكليزية'],grades:[1,2,3,4,5,6,7]},
+      {name:'ليان أحمد',email:'lian@nun.edu',pass:'1234',role:'student',grade:1},
+      {name:'سلمى خالد',email:'salma@nun.edu',pass:'1234',role:'student',grade:5}
+    ],
+    marks:{}
+  };
+}
+function load(){
+  try{const r=localStorage.getItem(KEY);if(r)return JSON.parse(r)}catch(e){}
+  return mem||(mem=seed());
+}
+let db=load();
+function save(){mem=db;try{localStorage.setItem(KEY,JSON.stringify(db))}catch(e){}}
+let me=null,tab='';
+const CONTACT={phone:'[ضعي رقم الهاتف هنا]',email:'[ضعي البريد الإلكتروني هنا]',addr:'نون – [ضعي العنوان هنا]',hours:'[ضعي ساعات الدوام هنا]'};
+let page='home';
+const NAVHTML='<button class="nv" data-p="home">الرئيسية</button><button class="nv" data-p="contact">تواصل معنا</button><button class="nv go" data-p="login">دخول البوابة</button>';
+function bindNav(){document.querySelectorAll('[data-p]').forEach(b=>b.onclick=()=>{
+  const p=b.dataset.p;
+  if(p==='contact'||p==='grades'){page='home';render();document.getElementById(p).scrollIntoView({behavior:'smooth'})}
+  else{page=p;render();window.scrollTo(0,0)}})}
+const HEROSVG=`<svg class="art" viewBox="0 0 520 340" role="img" aria-label="رسمة لمبنى المدرسة وطالبات">
+<circle cx="440" cy="64" r="34" fill="#ffb703"/><g fill="#fff" opacity=".9"><ellipse cx="90" cy="60" rx="46" ry="16"/><ellipse cx="120" cy="48" rx="28" ry="15"/><ellipse cx="360" cy="110" rx="36" ry="12"/></g>
+<path d="M0 290Q130 245 260 280T520 262V340H0z" fill="#2bb673"/><path d="M0 312Q160 280 300 306T520 296V340H0z" fill="#1f9a60"/>
+<rect x="84" y="200" width="70" height="92" fill="#f2f6fa"/><rect x="366" y="200" width="70" height="92" fill="#f2f6fa"/>
+<path d="M76 200l43-30 43 30zM358 200l43-30 43 30z" fill="#ffb703"/>
+<rect x="150" y="150" width="220" height="142" fill="#fff"/><path d="M134 152 260 92 386 152z" fill="#ff6b4a"/><circle cx="260" cy="130" r="11" fill="#ffb703"/>
+<path d="M260 92V54" stroke="#10304f" stroke-width="3"/><path d="M260 54l30 9-30 9z" fill="#ffb703"/>
+<path d="M238 292v-44a22 22 0 0 1 44 0v44z" fill="#1769c9"/>
+<g fill="#bfe3f6"><rect x="166" y="172" width="38" height="36" rx="3"/><rect x="316" y="172" width="38" height="36" rx="3"/><rect x="166" y="228" width="38" height="36" rx="3"/><rect x="316" y="228" width="38" height="36" rx="3"/><rect x="100" y="224" width="38" height="36" rx="3"/><rect x="382" y="224" width="38" height="36" rx="3"/></g>
+<g><rect x="44" y="240" width="10" height="50" fill="#8a5a3c"/><circle cx="49" cy="230" r="28" fill="#1f9a60"/><rect x="466" y="244" width="10" height="46" fill="#8a5a3c"/><circle cx="471" cy="232" r="26" fill="#1f9a60"/></g>
+<g><circle cx="200" cy="300" r="10" fill="#f3c9a0"/><rect x="190" y="310" width="20" height="26" rx="7" fill="#ff6b4a"/><circle cx="260" cy="304" r="10" fill="#f3c9a0"/><rect x="250" y="314" width="20" height="24" rx="7" fill="#7b5cd6"/><circle cx="320" cy="300" r="10" fill="#f3c9a0"/><rect x="310" y="310" width="20" height="26" rx="7" fill="#ffb703"/></g></svg>`;
+function contactItems(){const c=CONTACT,o=[];
+  if(!c.phone.startsWith('['))o.push('الهاتف: '+c.phone);
+  if(!c.email.startsWith('['))o.push('البريد: '+c.email);
+  if(!c.addr.includes('['))o.push('العنوان: '+c.addr);
+  if(!c.hours.startsWith('['))o.push('الدوام: '+c.hours);return o}
+function homeView(){
+  const ci=contactItems();
+  const COL=['#1769c9','#12a4b8','#2bb673','#e5a000','#ff6b4a','#7b5cd6','#e0508f'];
+  const IC={cap:'<path d="M12 3 1 9l11 6 9-4.9V17h2V9z"/><path d="M5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8z"/>',
+   board:'<path fill-rule="evenodd" d="M3 3h18v13H3zm2 2v9h14V5z"/><path d="M11 16h2v4h-2zM7 20h10v1.5H7z"/>',
+   info:'<path d="M4 4h7v16H4zM13 4h7v16h-7z"/>',
+   mail:'<path fill-rule="evenodd" d="M2 5h20v14H2zm2 2v.6l8 5 8-5V7zm16 3.2-8 5-8-5V17h16z"/>'};
+  const tile=(c,p,i,t,d,cl)=>`<button class="tile ${cl||''}" style="background:${c}" data-p="${p}"><svg viewBox="0 0 24 24" aria-hidden="true">${IC[i]}</svg>${t}<small>${d}</small></button>`;
+  return `
+<section class="hero"><div class="wrap hg"><div><h2>مدارس الإخوة الابتدائية – فرع نون</h2>
+<p>بيئة تعليمية آمنة ومحفّزة، نبني فيها شخصية الطالبة وعلمها من الصف الأول حتى السابع.</p>
+<div class="btns"><button class="b1" data-p="login">بوابة الطالبات والمعلمات</button><button class="b2" data-p="contact">تواصل معنا</button></div></div>
+${HEROSVG}</div>
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C240 70 480 0 720 25S1200 60 1440 20V60H0z" fill="var(--bg)"/></svg></section>
+<div class="wrap quick">${tile('#1769c9','login','cap','بوابة الطالبات','اطّلعي على علاماتك')}${tile('#12a4b8','login','board','بوابة المعلمات','إدخال العلامات ومتابعة الصفوف')}${tile('#ffb703','grades','info','صفوفنا ومواردنا','من الأول إلى السابع','y')}${tile('#ff6b4a','contact','mail','تواصل معنا','أرسلي استفسارك للإدارة')}</div>
+<section class="part"><div class="wrap"><h2 class="st">أهلاً بكم في مدارسنا</h2><div class="about"><div>
+<p>مدارس الإخوة – فرع نون مدرسة ابتدائية للبنات تضم الصفوف من الأول إلى السابع. نؤمن بأن لكل طالبة قدرات تستحق الرعاية، ونعمل مع الأسرة لنمنحها بداية قوية في مشوارها التعليمي.</p>
+<p>ترافق معلمة الصف طالباتها في المرحلة الأولى، وتتولى معلمات الاختصاص تدريس كل مادة في المرحلة الثانية، مع معلمات مختصات للغة الإنكليزية والمعلوماتية في جميع الصفوف.</p></div>
+<div class="badge"><img src="${LOGO}" alt="شعار المدرسة"></div></div></div></section>
+<section class="band"><div class="wrap stats"><div><b>7</b>صفوف دراسية</div><div><b>4</b>صفوف بمعلمة صف</div><div><b>3</b>صفوف بمعلمات اختصاص</div><div><b>7</b>مواد دراسية</div></div></section>
+<section class="part" id="grades"><div class="wrap"><h2 class="st">صفوفنا</h2><div class="grades">
+${GRADES.map((n,i)=>`<div class="gr" style="border-bottom-color:${COL[i]}"><i style="background:${COL[i]}">${i+1}</i><div><b>الصف ${n}</b><small>${i<4?'معلمة صف':'معلمات اختصاص'}</small></div></div>`).join('')}</div></div></section>
+<section class="part" style="padding-top:0"><div class="wrap"><h2 class="st">موادنا الدراسية</h2><div class="subj">${ALL.map((x,i)=>`<span style="background:${COL[i%7]}">${x}</span>`).join('')}</div></div></section>
+<section class="part contact" id="contact"><div class="wrap"><h2 class="st">تواصل معنا</h2>
+<div class="two"><div class="card info">${ci.length?ci.map(x=>`<p>${esc(x)}</p>`).join(''):'<p>سيتم نشر بيانات التواصل قريباً. يمكنك إرسال رسالتك عبر النموذج وستصل إلى الإدارة.</p>'}</div>
+<div class="card"><form id="cf"><label for="cn">الاسم</label><input id="cn" required>
+<label for="cp">رقم الهاتف</label><input id="cp" type="tel" required><label for="ct">الرسالة</label><textarea id="ct" rows="3" required></textarea>
+<p><button type="submit">إرسال</button><span class="ok" id="cmsg" role="status"></span></p></form></div></div></div></section>`}
+function footerHtml(){const ci=contactItems();return `<div class="fg"><div><h3>مدارس الإخوة الابتدائية – فرع نون</h3><p>من الصف الأول إلى السابع</p></div>
+<div><h3>روابط سريعة</h3><button class="lk" data-p="home">الرئيسية</button><button class="lk" data-p="login">دخول الطالبات والمعلمات</button><button class="lk" data-p="contact">تواصل معنا</button></div>
+<div><h3>التواصل</h3>${ci.map(x=>`<p>${esc(x)}</p>`).join('')||'<p>عبر نموذج التواصل في الصفحة</p>'}</div></div>
+<div class="copy">© مدارس الإخوة الابتدائية – فرع نون. جميع الحقوق محفوظة.</div>`}
+function sendMsg(e){e.preventDefault();db.msgs=db.msgs||[];
+  db.msgs.unshift({name:$('#cn').value.trim(),phone:$('#cp').value.trim(),text:$('#ct').value.trim(),at:new Date().toLocaleDateString('ar')});
+  save();$('#cf').reset();$('#cmsg').textContent='وصلت رسالتك، رح نرد عليكِ قريباً.'}
+function msgsPane(){const m=db.msgs||[];
+  $('#pane').innerHTML=`<div class="card"><h2>رسائل التواصل (${m.length})</h2>${m.length?m.map(x=>`<div class="msg"><b>${esc(x.name)}</b> – ${esc(x.phone)} <small>${esc(x.at)}</small><div>${esc(x.text)}</div></div>`).join(''):'<p>ما وصلت رسائل بعد.</p>'}</div>`}
+
+
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const gname=g=>'الصف '+GRADES[g-1];
+
+function render(){
+  $('#out').hidden=!me;
+  $('#who').textContent=me?me.name:'';
+  $('#nav').innerHTML=me?'':NAVHTML;$('#ft').innerHTML=(!me&&page==='home')?footerHtml():'';{const t=me?[]:contactItems();$('#top').innerHTML=t.map(x=>`<span>${esc(x)}</span>`).join('');$('#top').hidden=!t.length}const app=$('#app');app.className=(!me&&page==='home')?'home':'';
+  if(!me){if(page==='login'){app.innerHTML=loginView();$('#f').onsubmit=doLogin}else{app.innerHTML=homeView();$('#cf').onsubmit=sendMsg}bindNav();return}
+  if(me.role==='admin')adminView(app);
+  else if(me.role==='teacher')teacherView(app);
+  else studentView(app);
+}
+
+function loginView(){return `<div class="card login"><img class="biglogo" src="${LOGO}" alt="شعار مدارس الإخوة"><h2>تسجيل الدخول</h2>
+<form id="f"><label for="em">البريد الإلكتروني</label><input id="em" type="email" required autocomplete="username">
+<label for="pw">كلمة السر</label><input id="pw" type="password" required autocomplete="current-password">
+<div class="err" id="err" role="alert"></div><button type="submit">دخول</button></form>
+<div class="hint">حسابات تجريبية: admin@nun.edu / admin123 (إدارة)، sana@nun.edu / 1234 (معلمة صف)، rima@nun.edu / 1234 (معلمة اختصاص)، lian@nun.edu / 1234 (طالبة)</div></div>`}
+
+function doLogin(e){
+  e.preventDefault();
+  const em=$('#em').value.trim().toLowerCase(),pw=$('#pw').value;
+  const u=db.users.find(x=>x.email.toLowerCase()===em&&x.pass===pw);
+  if(!u){$('#err').textContent='البريد أو كلمة السر غير صحيحة. تأكدي منهما وحاولي مرة ثانية.';return}
+  me=u;tab='';render();
+}
+$('#out').onclick=()=>{me=null;page='home';render()};
+
+/* ---------- الطالبة ---------- */
+function subjectsFor(g){return ALL}
+function studentView(app){
+  const m=(db.marks[me.email]||{});
+  const rows=subjectsFor(me.grade).map(s=>{
+    const v=m[s];
+    return `<tr><td>${s}</td><td>${v==null?'—':v}</td><td>${v==null?'':(v>=50?'<span class="pass">ناجحة</span>':'<span class="fail">راسبة</span>')}</td></tr>`}).join('');
+  app.innerHTML=`<div class="card"><h2>علاماتي – ${gname(me.grade)}</h2><div class="tw"><table><tr><th>المادة</th><th>العلامة من 100</th><th>الحالة</th></tr>${rows}</table></div></div>`;
+}
+
+/* ---------- المعلمة ---------- */
+function teacherView(app){
+  const opts=[];
+  me.grades.forEach(g=>me.subjects.forEach(s=>opts.push({g,s})));
+  const kindTxt=me.kind==='class'?`معلمة صف – ${gname(me.classGrade)}`:`معلمة اختصاص – ${me.subjects.join('، ')}`;
+  app.innerHTML=`<div class="card"><h2>إدخال العلامات</h2><p style="color:var(--mut);margin:0 0 8px">${kindTxt}</p>
+  <label for="sel">الصف والمادة</label>
+  <select id="sel">${opts.map((o,i)=>`<option value="${i}">${gname(o.g)} – ${o.s}</option>`).join('')}</select></div>
+  <div class="card" id="sheet"></div>`;
+  const draw=()=>{
+    const o=opts[$('#sel').value];
+    const sts=db.users.filter(u=>u.role==='student'&&u.grade===o.g);
+    if(!sts.length){$('#sheet').innerHTML='<p>ما في طالبات مسجلات بهذا الصف بعد. الإدارة بتضيفهن من لوحة الإدارة.</p>';return}
+    $('#sheet').innerHTML=`<div class="tw"><table><tr><th>الطالبة</th><th>العلامة (0–100)</th></tr>${sts.map(s=>`<tr><td>${esc(s.name)}</td><td><input type="number" min="0" max="100" data-e="${esc(s.email)}" value="${(db.marks[s.email]||{})[o.s]??''}" aria-label="علامة ${esc(s.name)}"></td></tr>`).join('')}</table></div>
+    <p><button id="sv">حفظ العلامات</button><span class="ok" id="msg"></span></p>`;
+    $('#sv').onclick=()=>{
+      document.querySelectorAll('#sheet input[data-e]').forEach(i=>{
+        const e=i.dataset.e;db.marks[e]=db.marks[e]||{};
+        if(i.value==='')delete db.marks[e][o.s];
+        else db.marks[e][o.s]=Math.min(100,Math.max(0,Number(i.value)));
+      });
+      save();$('#msg').textContent='تم حفظ العلامات';
+    };
+  };
+  $('#sel').onchange=draw;draw();
+}
+
+/* ---------- الإدارة ---------- */
+function adminView(app){
+  tab=tab||'t';
+  app.innerHTML=`<div class="tabs"><button data-t="t" class="${tab==='t'?'on':''}">المعلمات</button><button data-t="s" class="${tab==='s'?'on':''}">الطالبات</button><button data-t="m" class="${tab==='m'?'on':''}">الرسائل</button></div><div id="pane"></div>`;
+  app.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{tab=b.dataset.t;render()});
+  ({t:teachersPane,s:studentsPane,m:msgsPane})[tab]();
+}
+function emailTaken(e){return db.users.some(u=>u.email.toLowerCase()===e.toLowerCase())}
+
+function teachersPane(){
+  const list=db.users.filter(u=>u.role==='teacher');
+  $('#pane').innerHTML=`<div class="card"><h2>إضافة معلمة</h2><form id="tf">
+  <div class="row"><div><label for="tn">الاسم</label><input id="tn" required></div>
+  <div><label for="te">البريد الإلكتروني</label><input id="te" type="email" required></div>
+  <div><label for="tp">كلمة السر</label><input id="tp" required minlength="4"></div></div>
+  <label for="tk">نوع المعلمة</label>
+  <select id="tk"><option value="class">معلمة صف (من الأول إلى الرابع)</option><option value="spec">معلمة اختصاص (مادة واحدة)</option></select>
+  <div id="kc"><label for="tg">الصف</label><select id="tg">${[1,2,3,4].map(g=>`<option value="${g}">${gname(g)}</option>`).join('')}</select>
+  <p class="hint" style="border:0;margin:6px 0 0">معلمة الصف بتدرّس كل المواد ما عدا الإنكليزي والمعلوماتية.</p></div>
+  <div id="ks" hidden><label for="ts">المادة</label><select id="ts">${ALL.map(s=>`<option>${s}</option>`).join('')}</select>
+  <label>الصفوف</label><div class="chk">${GRADES.map((n,i)=>`<label><input type="checkbox" value="${i+1}" class="gc">${n}</label>`).join('')}</div></div>
+  <div class="err" id="terr" role="alert"></div><button type="submit">إضافة المعلمة</button></form></div>
+  <div class="card"><h2>المعلمات (${list.length})</h2><div class="tw"><table><tr><th>الاسم</th><th>البريد</th><th>التدريس</th><th></th></tr>
+  ${list.map(t=>`<tr><td>${esc(t.name)}</td><td>${esc(t.email)}</td><td>${t.kind==='class'?'صف: '+gname(t.classGrade):esc(t.subjects[0])+' ('+t.grades.map(g=>GRADES[g-1]).join('، ')+')'}</td><td><button class="ghost sm" data-d="${esc(t.email)}">حذف</button></td></tr>`).join('')}</table></div></div>`;
+  $('#tk').onchange=()=>{const c=$('#tk').value==='class';$('#kc').hidden=!c;$('#ks').hidden=c};
+  $('#tf').onsubmit=e=>{
+    e.preventDefault();
+    const email=$('#te').value.trim(),kind=$('#tk').value;
+    if(emailTaken(email)){$('#terr').textContent='هذا البريد مستخدم مسبقاً.';return}
+    const u={name:$('#tn').value.trim(),email,pass:$('#tp').value,role:'teacher',kind};
+    if(kind==='class'){u.classGrade=+$('#tg').value;u.grades=[u.classGrade];u.subjects=SUBJ_CLASS}
+    else{u.subjects=[$('#ts').value];u.grades=[...document.querySelectorAll('.gc:checked')].map(c=>+c.value);
+      if(!u.grades.length){$('#terr').textContent='اختاري صفاً واحداً على الأقل.';return}}
+    db.users.push(u);save();render();
+  };
+  delBtns(teachersPane);
+}
+function studentsPane(){
+  const list=db.users.filter(u=>u.role==='student').sort((a,b)=>a.grade-b.grade);
+  $('#pane').innerHTML=`<div class="card"><h2>إضافة طالبة</h2><form id="sf"><div class="row">
+  <div><label for="sn">الاسم</label><input id="sn" required></div>
+  <div><label for="se">البريد الإلكتروني</label><input id="se" type="email" required></div>
+  <div><label for="sp">كلمة السر</label><input id="sp" required minlength="4"></div>
+  <div><label for="sg">الصف</label><select id="sg">${GRADES.map((n,i)=>`<option value="${i+1}">${gname(i+1)}</option>`).join('')}</select></div></div>
+  <div class="err" id="serr" role="alert"></div><button type="submit">إضافة الطالبة</button></form></div>
+  <div class="card"><h2>الطالبات (${list.length})</h2><div class="tw"><table><tr><th>الاسم</th><th>البريد</th><th>الصف</th><th></th></tr>
+  ${list.map(s=>`<tr><td>${esc(s.name)}</td><td>${esc(s.email)}</td><td>${gname(s.grade)}</td><td><button class="ghost sm" data-d="${esc(s.email)}">حذف</button></td></tr>`).join('')}</table></div></div>`;
+  $('#sf').onsubmit=e=>{
+    e.preventDefault();const email=$('#se').value.trim();
+    if(emailTaken(email)){$('#serr').textContent='هذا البريد مستخدم مسبقاً.';return}
+    db.users.push({name:$('#sn').value.trim(),email,pass:$('#sp').value,role:'student',grade:+$('#sg').value});
+    save();render();
+  };
+  delBtns(studentsPane);
+}
+function delBtns(){
+  document.querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>{
+    if(!confirm('متأكدة من الحذف؟'))return;
+    db.users=db.users.filter(u=>u.email!==b.dataset.d);delete db.marks[b.dataset.d];save();render();
+  });
+}
+render();
+</script>
+</body>
+</html>
